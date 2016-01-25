@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.3.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore" xmlns:SQLTables="http:///org/eclipse/datatools/modelbase/sql/tables.ecore">
+  <SQLSchema:Database xmi:id="_r17W4cIYEeWCQIZPEGm5nA" name="test" vendor="SQL Server" version="2008" schemas="_r3dn8MIYEeWCQIZPEGm5nA">
+    <eAnnotations xmi:id="_r17W4sIYEeWCQIZPEGm5nA" source="ConnectionURI">
+      <details xmi:id="_r17W48IYEeWCQIZPEGm5nA" key="ConnectionKey" value="SQLCon"/>
+    </eAnnotations>
+  </SQLSchema:Database>
+  <SQLSchema:Schema xmi:id="_r3dn8MIYEeWCQIZPEGm5nA" name="dbo" tables="_r3dn8cIYEeWCQIZPEGm5nA" database="_r17W4cIYEeWCQIZPEGm5nA"/>
+  <SQLTables:PersistentTable xmi:id="_r3dn8cIYEeWCQIZPEGm5nA" name="email_list" schema="_r3dn8MIYEeWCQIZPEGm5nA">
+    <columns xmi:id="_r3dn8sIYEeWCQIZPEGm5nA" name="id" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_r3dn88IYEeWCQIZPEGm5nA" name="INT" primitiveType="INTEGER"/>
+    </columns>
+    <columns xmi:id="_r3dn9MIYEeWCQIZPEGm5nA" name="name" defaultValue="NULL">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_r3dn9cIYEeWCQIZPEGm5nA" name="NVARCHAR" primitiveType="NATIONAL_CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xmi:id="_r3dn9sIYEeWCQIZPEGm5nA" name="surname" defaultValue="NULL">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_r3dn98IYEeWCQIZPEGm5nA" name="NVARCHAR" primitiveType="NATIONAL_CHARACTER_VARYING" length="100"/>
+    </columns>
+    <columns xmi:id="_r3dn-MIYEeWCQIZPEGm5nA" name="email" defaultValue="NULL">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_r3dn-cIYEeWCQIZPEGm5nA" name="NVARCHAR" primitiveType="NATIONAL_CHARACTER_VARYING" length="100"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_r3dn-sIYEeWCQIZPEGm5nA" name="PK__email_li__3213E83F65ACF8FD" members="_r3dn8sIYEeWCQIZPEGm5nA"/>
+  </SQLTables:PersistentTable>
+</xmi:XMI>

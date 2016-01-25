@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.etools.mft.unittest.core.models.client="http:///com/ibm/etools/mft/unittest/core/models/client.ecore" xmlns:com.ibm.wbit.comptest.common.models.event="http:///com/ibm/etools/mft/unittest/common/models/event.ecore" xmlns:jms="http:///com/ibm//etools/mft/unittest/common/model2/jms" xmlns:model2="http:///com/ibm//etools/mft/unittest/common/model2" xmlns:mq="http:///com/ibm//etools/mft/unittest/common/model2/mq">
+  <com.ibm.etools.mft.unittest.core.models.client:EclipseClient iD="1181720741734-182" eventTrace="/1" clientID="1181720741734-182">
+    <scopes xsi:type="model2:FlowTestScope" iD="1181720741734-185">
+      <testModules xsi:type="model2:TestMsgFlow" iD="1181720741734-188"/>
+      <settings xsi:type="model2:FlowSettings"/>
+      <settings xsi:type="model2:DeploymentSettings"/>
+      <settings xsi:type="mq:MQSettings"/>
+      <settings xsi:type="jms:JMSSettings"/>
+      <settings xsi:type="mq:MQMessageHeaders"/>
+      <settings xsi:type="jms:JMSMessageHeaders"/>
+      <messageHeaders xsi:type="mq:MQHeader" iD="1181720741734-186" putApplicationName=".0\eclipse\jre\bin\javaw.exe" putApplicationType="11" userId="argostr     " headerName="Header from .enqueue"/>
+    </scopes>
+  </com.ibm.etools.mft.unittest.core.models.client:EclipseClient>
+  <com.ibm.wbit.comptest.common.models.event:ExecutionEventTrace iD="1181720741734-183" children="/2 /3"/>
+  <mq:InteractiveMQEnqueueEvent iD="1181720741734-184" timestamp="1181720741734" host="localhost" port="0" queueManager="IB9QMGR" queue="JAVACOMPUTE.TRANSFORMNOXPATH.IN" mqmdId="1181720741734-186">
+    <request xsi:type="model2:TestMessage" iD="1181720741734-187" header="/0/@scopes.0/@messageHeaders.0">
+      <properties name="messageSource" stringValue="sourceView"/>
+      <properties name="plainText" stringValue="&lt;SaleEnvelope>&lt;Header>&lt;SaleListCount>1&lt;/SaleListCount>&lt;/Header>&lt;SaleList>&lt;Invoice>&lt;Initial>K&lt;/Initial>&lt;Initial>A&lt;/Initial>&lt;Surname>Braithwaite&lt;/Surname>&lt;Item>&lt;Code>00&lt;/Code>&lt;Code>01&lt;/Code>&lt;Code>02&lt;/Code>&lt;Description>Twister&lt;/Description>&lt;Category>Games&lt;/Category>&lt;Price>00.30&lt;/Price>&lt;Quantity>01&lt;/Quantity>&lt;/Item>&lt;Item>&lt;Code>02&lt;/Code>&lt;Code>03&lt;/Code>&lt;Code>01&lt;/Code>&lt;Description>The Times Newspaper&lt;/Description>&lt;Category>Books and Media&lt;/Category>&lt;Price>00.20&lt;/Price>&lt;Quantity>01&lt;/Quantity>&lt;/Item>&lt;Balance>00.50&lt;/Balance>&lt;Currency>Sterling&lt;/Currency>&lt;/Invoice>&lt;Invoice>&lt;Initial>T&lt;/Initial>&lt;Initial>J&lt;/Initial>&lt;Surname>Dunnwin&lt;/Surname>&lt;Item>&lt;Code>04&lt;/Code>&lt;Code>05&lt;/Code>&lt;Code>01&lt;/Code>&lt;Description>The Origin of Species&lt;/Description>&lt;Category>Books and Media&lt;/Category>&lt;Price>22.34&lt;/Price>&lt;Quantity>02&lt;/Quantity>&lt;/Item>&lt;Item>&lt;Code>06&lt;/Code>&lt;Code>07&lt;/Code>&lt;Code>01&lt;/Code>&lt;Description>Microscope&lt;/Description>&lt;Category>Miscellaneous&lt;/Category>&lt;Price>36.20&lt;/Price>&lt;Quantity>01&lt;/Quantity>&lt;/Item>&lt;Balance>81.84&lt;/Balance>&lt;Currency>Euros&lt;/Currency>&lt;/Invoice>&lt;/SaleList>&lt;Trailer>&lt;CompletionTime>12.00.00&lt;/CompletionTime>&lt;/Trailer>&lt;/SaleEnvelope>"/>
+    </request>
+  </mq:InteractiveMQEnqueueEvent>
+  <mq:InteractiveMQDequeueEvent iD="1185447588765-71" timestamp="1185447588765" host="localhost" port="0" queueManager="IB9QMGR" queue="JAVACOMPUTE.TRANSFORMNOXPATH.OUT"/>
+</xmi:XMI>

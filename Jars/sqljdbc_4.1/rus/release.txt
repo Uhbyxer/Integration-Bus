@@ -1,0 +1,95 @@
+Сведения о версии
+Драйвер Microsoft JDBC 4.1 для SQL Server
+Ноябрь 2014
+
+
+ВВЕДЕНИЕ
+------------
+Этот файл содержит последние сведения или другую важную информацию, 
+дополняет документацию на драйвер Microsoft JDBC 4.1 для SQL Server
+. Необходимо полностью прочитать данный файл перед 
+установкой драйвера JDBC.
+
+Ваше мнение очень важно для нас, и мы будет стремиться
+своевременно отвечать на ваши отзывы. Дополнительные сведения
+о предоставлении отзывов с помощью блогов о драйвере JDBC и через форумы в сети
+см. на странице драйвер Microsoft JDBC 4.1 для SQL Server сайта
+http://msdn.microsoft.com/data/jdbc.
+
+
+УСТАНОВКА
+------------
+Инструкции по установке драйвера JDBC приводятся в файле install.txt.
+Используйте этот файл для получения информации об установке драйвера JDBC
+в операционных системах Windows и Unix.
+
+ПОДДЕРЖИВАЕМЫЕ ОПЕРАЦИОННЫЕ СИСТЕМЫ
+---------------------------
+Драйвер Microsoft JDBC 4.1 для SQL Server поддерживает следующие операционные системы: 
+Linux, Unix, Windows Server 2008,
+Windows Vista с пакетом обновления 1, Windows Server 2008 R2, Windows 7, Windows 8 и Windows 8.1.
+
+В вышеприведенном списке представлены некоторые из поддерживаемых операционных систем.
+Драйвер JDBC разработан для работы в любой операционной системе, которая поддерживает
+использование виртуальной машины Java (JVM). Однако были испытаны только Sun Solaris, SUSE,
+Linux и Windows Vista с пакетом обновления 1 или более поздние операционные системы.
+
+СОСТАВ РАСПРОСТРАНЯЕМОЙ ВЕРСИИ
+----------------
+Исполняемый файл zip или tar драйвера Microsoft JDBC 4.1 для SQL Server
+распаковывает следующие файлы в указанных расположениях в соответствии с
+выбранным для установки каталогом:
+
+<installation directory>\sqljdbc_<version>\<language>\install.txt
+<installation directory>\sqljdbc_<version>\<language>\release.txt
+<installation directory>\sqljdbc_<version>\<language>\license.txt
+<installation directory>\sqljdbc_<version>\<language>\sqljdbc.jar
+<installation directory>\sqljdbc_<version>\<language>\sqljdbc4.jar
+<installation directory>\sqljdbc_<version>\<language>\sqljdbc41.jar
+<installation directory>\sqljdbc_<version>\<language>\auth\x86\sqljdbc_auth.dll
+<installation directory>\sqljdbc_<version>\<language>\auth\x64\sqljdbc_auth.dll
+<installation directory>\sqljdbc_<version>\<language>\xa\xa_install.sql
+<installation directory>\sqljdbc_<version>\<language>\xa\x86\sqljdbc_xa.dll
+<installation directory>\sqljdbc_<version>\<language>\xa\x64\sqljdbc_xa.dll
+
+
+СПИСОК ИЗМЕНЕНИЙ
+-----------
+Изменения в версии 4.1 относительно версии 4.0.
+
+2828290 Имя нового сервера теперь отправляется в пакете Login7 после перенаправления запроса
+
+3362720 Драйвер JDBC теперь поддерживает комплект разработчика Java (JDK) версии 7.0 в дополнение к JDK 5.0 и 6.0. Он включает новый файл jar sqljdbc41.jar, который поддерживает JDK 7.0 и совместим с API JDBC 4.0. 
+
+ИЗВЕСТНЫЕ ПРОБЛЕМЫ
+------------
+Далее представлены известные проблемы с драйвером Microsoft JDBC 4.1 для SQL Server.
+
+1) ОГРАНИЧЕНИЯ ПАРАМЕТРОВ МЕТАДАННЫХ В ИНСТРУКЦИИ SQL MERGE
+
+PreparedStatement.getParameterMetadata() создает исключение SQLException при использовании
+с помощью параметризованного запроса MERGE.
+
+
+2) JavaKerberos и виртуальные машины IBM
+
+При выполнении в среде Windows, возможно, потребуется указать имя участника principalname в файле конфигурации для исправной работы Java Kerberos. Например: 
+SQLJDBCDriver {
+com.ibm.security.auth.module.Krb5LoginModule требовал useDefaultCcache=true credsType=initiator principal=principalname@principaldomain;
+};
+
+
+3) РАЗРЫВ СОЕДИНЕНИЯ ПРИ ИСПОЛЬЗОВАНИИ SQL AZURE
+
+При подключении к SQL Azure неактивные подключения могут быть прекращены сетевым компонентом (например, брандмауэром) после 
+периода бездействия. Чтобы избежать удаления неактивных подключений сетевым компонентом, следует 
+установить следующие параметры реестра (или их эквиваленты, отличные от Windows) в операционной системе, в которую загружается драйвер:
+           
+           Параметр реестра                                                                 Рекомендуемое значение
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveTime                 30000      
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\KeepAliveInterval             1000
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\TcpMaxDataRetransmission      10
+  
+
+
+

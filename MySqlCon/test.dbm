@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xtools2_universal_type_manager-->
+<xmi:XMI xmlns:datamodelversion="http://www.ibm.com/com.ibm.datatools.core/model/data/1.3.0.0" xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SQLConstraints="http:///org/eclipse/datatools/modelbase/sql/constraints.ecore" xmlns:SQLDataTypes="http:///org/eclipse/datatools/modelbase/sql/datatypes.ecore" xmlns:SQLSchema="http:///org/eclipse/datatools/modelbase/sql/schema.ecore" xmlns:SQLTables="http:///org/eclipse/datatools/modelbase/sql/tables.ecore">
+  <SQLSchema:Database xmi:id="_6Q70oMIoEeWAecO83nmqQQ" name="test" vendor="MySql" version="4.0" schemas="_6WbYoMIoEeWAecO83nmqQQ">
+    <eAnnotations xmi:id="_6Q70ocIoEeWAecO83nmqQQ" source="ConnectionURI">
+      <details xmi:id="_6Q70osIoEeWAecO83nmqQQ" key="ConnectionKey" value="MySqlCon"/>
+    </eAnnotations>
+  </SQLSchema:Database>
+  <SQLSchema:Schema xmi:id="_6WbYoMIoEeWAecO83nmqQQ" name="test" tables="_6WbYocIoEeWAecO83nmqQQ _6Wb_s8IoEeWAecO83nmqQQ" database="_6Q70oMIoEeWAecO83nmqQQ"/>
+  <SQLTables:PersistentTable xmi:id="_6WbYocIoEeWAecO83nmqQQ" name="email_list" schema="_6WbYoMIoEeWAecO83nmqQQ">
+    <columns xmi:id="_6WbYosIoEeWAecO83nmqQQ" name="id" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_6WbYo8IoEeWAecO83nmqQQ" name="INT" primitiveType="INTEGER"/>
+    </columns>
+    <columns xmi:id="_6WbYpMIoEeWAecO83nmqQQ" name="name" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_6WbYpcIoEeWAecO83nmqQQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <columns xmi:id="_6WbYpsIoEeWAecO83nmqQQ" name="surname" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_6WbYp8IoEeWAecO83nmqQQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_6Wb_sMIoEeWAecO83nmqQQ" name="email" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_6Wb_scIoEeWAecO83nmqQQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="50"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_6Wb_ssIoEeWAecO83nmqQQ" name="PRIMARY" members="_6WbYosIoEeWAecO83nmqQQ"/>
+  </SQLTables:PersistentTable>
+  <SQLTables:PersistentTable xmi:id="_6Wb_s8IoEeWAecO83nmqQQ" name="employee" schema="_6WbYoMIoEeWAecO83nmqQQ">
+    <columns xmi:id="_6Wb_tMIoEeWAecO83nmqQQ" name="empno" description="" nullable="false">
+      <containedType xsi:type="SQLDataTypes:IntegerDataType" xmi:id="_6Wb_tcIoEeWAecO83nmqQQ" name="INT" primitiveType="INTEGER"/>
+    </columns>
+    <columns xmi:id="_6Wb_tsIoEeWAecO83nmqQQ" name="ename" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_6Wb_t8IoEeWAecO83nmqQQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <columns xmi:id="_6Wb_uMIoEeWAecO83nmqQQ" name="job_title" description="">
+      <containedType xsi:type="SQLDataTypes:CharacterStringDataType" xmi:id="_6Wb_ucIoEeWAecO83nmqQQ" name="VARCHAR" primitiveType="CHARACTER_VARYING" length="255"/>
+    </columns>
+    <constraints xsi:type="SQLConstraints:PrimaryKey" xmi:id="_6Wb_usIoEeWAecO83nmqQQ" name="PRIMARY" members="_6Wb_tMIoEeWAecO83nmqQQ"/>
+  </SQLTables:PersistentTable>
+</xmi:XMI>

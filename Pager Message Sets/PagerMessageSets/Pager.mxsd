@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:complexType name="Pager">
+        <xsd:sequence>
+            <xsd:element name="Text" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="Pager" type="Pager">
+        <xsd:annotation>
+            <xsd:appinfo source="WMQI_APPINFO">
+                <MRMessage messageDefinition="/Pager;XSDElementDeclaration/"/>
+                <xmlMsgRep messageSetDefaultRep="XML" rootTagName=""/>
+            </xsd:appinfo>
+        </xsd:annotation>
+    </xsd:element>
+</xsd:schema>

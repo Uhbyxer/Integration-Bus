@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.4.0" xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default">
+    <input path="/userlist.xsd" var="var3"/>
+    <input path="jar:file://!com/ibm/msl/mapping/rdb/xsds/dbreturn.xsd" var="var4"/>
+    <output path="db:table(/test.dbm,test,dbo,email_list)" var="emaillist2"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="lab7_Связи">
+        <input path="$var3/mb:msg(userlist,assembly,XMLNSC,Properties)" var="Сборкасообщения"/>
+        <output path="$emaillist2/db:insert(fn:false(),id,name,surname,email)" var="var2"/>
+        <foreach>
+            <input path="$Сборкасообщения/userlist/user"/>
+            <output path="$var2/."/>
+            <transaction>
+                <insert ref="var2">
+                    <input path="."/>
+                    <output path="."/>
+                    <move>
+                        <input path="firstname"/>
+                        <output path="name"/>
+                    </move>
+                    <move>
+                        <input path="lastname"/>
+                        <output path="surname"/>
+                    </move>
+                    <move>
+                        <input path="email"/>
+                        <output path="email"/>
+                    </move>
+                    <move>
+                        <input path="id"/>
+                        <output path="id"/>
+                    </move>
+                </insert>
+                <return>
+                    <input path="$var4/DBInsertReturn"/>
+                </return>
+            </transaction>
+        </foreach>
+    </mappingDeclaration>
+</mappingRoot>

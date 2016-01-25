@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.3.0" xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default">
+    <input path="/PagerMessageSets/SurfWatch.mxsd"/>
+    <output path="/PagerMessageSets/Pager.mxsd"/>
+    <namespaces>
+        <namespace kind="extension" prefix="fn" uri="http://www.w3.org/2005/xpath-functions"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <documentation>This map was created by converting /Pager Message Flows/SurfWatch_Mapping.msgmap using the IBM Integration Bus Toolkit assisted msgmap converter version 8.0.200.v20121121-2100. Time stamp: Mon Dec 17 15:52:13 GMT 2012</documentation>
+    <mappingDeclaration name="SurfWatch_Mapping">
+        <input namespace="" path="mb:msg(SurfWatch,assembly,,Properties)"/>
+        <output namespace="" path="mb:msg(Pager,assembly,MRM,Properties)"/>
+        <function msgmap="The calling arguments for the function fn:concat is to be reviewed. " ref="fn:concat">
+            <input path="SurfWatch/TimeDate" var="TimeDate"/>
+            <input path="SurfWatch/Waves" var="Waves"/>
+            <input path="SurfWatch/Break" var="Break"/>
+            <input path="SurfWatch/Wind" var="Wind"/>
+            <output path="Pager/Text"/>
+            <documentation description="The calling arguments for the function fn:concat is to be reviewed. " ref="/Pager Message Flows/SurfWatch_Mapping.msgmap_backup">The XPath function call was converted from SurfWatch_Mapping.
+Ensure the argument number, order and type matches the supported function specification.
+Refer to &lt;missing argument&gt; for the original function usage.</documentation>
+            <param name="string1" value="'SurfWatch '"/>
+            <param name="string2" value="$TimeDate"/>
+            <param name="string3" value="' '"/>
+            <param name="" value="$Break"/>
+            <param name="" value="': '"/>
+            <param name="" value="$Wind"/>
+            <param name="" value="', waves '"/>
+            <param name="" value="$Waves"/>
+            <param name="" value="'m.'"/>
+        </function>
+        <local>
+            <input path="Properties"/>
+            <output path="Properties"/>
+            <assign value="PagerMessageSets">
+                <output path="MessageSet"/>
+            </assign>
+            <assign value="{}:Pager">
+                <output path="MessageType"/>
+            </assign>
+            <move>
+                <input path="MessageFormat"/>
+                <output path="MessageFormat"/>
+            </move>
+            <move>
+                <input path="Encoding"/>
+                <output path="Encoding"/>
+            </move>
+            <move>
+                <input path="CodedCharSetId"/>
+                <output path="CodedCharSetId"/>
+            </move>
+            <move>
+                <input path="Transactional"/>
+                <output path="Transactional"/>
+            </move>
+            <move>
+                <input path="Persistence"/>
+                <output path="Persistence"/>
+            </move>
+            <move>
+                <input path="CreationTime"/>
+                <output path="CreationTime"/>
+            </move>
+            <move>
+                <input path="ExpirationTime"/>
+                <output path="ExpirationTime"/>
+            </move>
+            <move>
+                <input path="Priority"/>
+                <output path="Priority"/>
+            </move>
+            <move>
+                <input path="ReplyIdentifier"/>
+                <output path="ReplyIdentifier"/>
+            </move>
+            <move>
+                <input path="ReplyProtocol"/>
+                <output path="ReplyProtocol"/>
+            </move>
+            <move>
+                <input path="Topic"/>
+                <output path="Topic"/>
+            </move>
+            <move>
+                <input path="ContentType"/>
+                <output path="ContentType"/>
+            </move>
+            <move>
+                <input path="IdentitySourceType"/>
+                <output path="IdentitySourceType"/>
+            </move>
+            <move>
+                <input path="IdentitySourceToken"/>
+                <output path="IdentitySourceToken"/>
+            </move>
+            <move>
+                <input path="IdentitySourcePassword"/>
+                <output path="IdentitySourcePassword"/>
+            </move>
+            <move>
+                <input path="IdentitySourceIssuedBy"/>
+                <output path="IdentitySourceIssuedBy"/>
+            </move>
+            <move>
+                <input path="IdentityMappedType"/>
+                <output path="IdentityMappedType"/>
+            </move>
+            <move>
+                <input path="IdentityMappedToken"/>
+                <output path="IdentityMappedToken"/>
+            </move>
+            <move>
+                <input path="IdentityMappedPassword"/>
+                <output path="IdentityMappedPassword"/>
+            </move>
+            <move>
+                <input path="IdentityMappedIssuedBy"/>
+                <output path="IdentityMappedIssuedBy"/>
+            </move>
+        </local>
+    </mappingDeclaration>
+</mappingRoot>

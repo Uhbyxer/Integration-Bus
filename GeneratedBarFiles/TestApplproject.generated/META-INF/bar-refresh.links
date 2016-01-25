@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy:Deploy xmlns:deploy="http://www.ibm.com/xmlns/prod/wmb/deploy/6.0.0">
+  <options name="uteSyncKey" value="20160121_0234_36"/>
+  <deployables>
+    <deployable deployed="true" barResourceTimeStamp="1453378029544" workspaceResource="/TestAppl/.project">
+      <deployableStatus code="0" key="DEPLOYABLE_LAST_COMPILE_STATUS" message="&#xA;Обработка файла TestAppl.&#xA;Файл приложения TestAppl.appzip добавлен в архив посредника.&#xA;Скомпилированное содержимое приложения:&#xA;    &#xA;    Обработка файла TestAppl\flow1.msgflow.&#xA;    Файл TestAppl\flow1.msgflow добавлен в файл архива.&#xA;    &#xA;&#xA;Прошедшее время: 0,369 с.&#xA;" severity="0"/>
+      <barEntry name="TestAppl.appzip"/>
+    </deployable>
+  </deployables>
+</deploy:Deploy>

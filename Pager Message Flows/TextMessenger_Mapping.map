@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" mainMap="true" targetNamespace="default" version="8.0.3.0" xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:map="default">
+    <input path="/PagerMessageSets/Pager.mxsd"/>
+    <output path="/PagerMessageSets/Pager.mxsd"/>
+    <namespaces>
+        <namespace kind="extension" prefix="fn" uri="http://www.w3.org/2005/xpath-functions"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <documentation>This map was created by converting /Pager Message Flows/TextMessenger_Mapping.msgmap using the IBM Integration Bus Toolkit assisted msgmap converter version 8.0.200.v20121121-2100. Time stamp: Mon Dec 17 15:52:18 GMT 2012</documentation>
+    <mappingDeclaration name="TextMessenger_Mapping">
+        <input namespace="" path="mb:msg(Pager,assembly,,Properties)"/>
+        <output namespace="" path="mb:msg(Pager,assembly,MRM,Properties)"/>
+        <move>
+            <input path="Properties"/>
+            <output path="Properties"/>
+        </move>
+        <function msgmap="The calling arguments for the function fn:concat is to be reviewed. " ref="fn:concat">
+            <input path="Pager/Text" var="Text"/>
+            <output path="Pager/Text"/>
+            <documentation description="The calling arguments for the function fn:concat is to be reviewed. " ref="/Pager Message Flows/TextMessenger_Mapping.msgmap_backup">The XPath function call was converted from TextMessenger_Mapping.
+Ensure the argument number, order and type matches the supported function specification.
+Refer to &lt;missing argument&gt; for the original function usage.</documentation>
+            <param name="string1" value="$Text"/>
+            <param name="string2" value="' Powered by IBM.'"/>
+        </function>
+    </mappingDeclaration>
+</mappingRoot>

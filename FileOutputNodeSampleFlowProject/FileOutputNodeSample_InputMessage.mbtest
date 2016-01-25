@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.etools.mft.unittest.core.models.client="http:///com/ibm/etools/mft/unittest/core/models/client.ecore" xmlns:com.ibm.wbit.comptest.common.models.event="http:///com/ibm/etools/mft/unittest/common/models/event.ecore" xmlns:com.ibm.wbit.comptest.common.models.value="http:///com/ibm/etools/mft/unittest/common/models/value.ecore" xmlns:http="http:///com/ibm//etools/mft/unittest/common/model2/http" xmlns:http_1="http:///com/ibm//etools/mft/unittest/common/model2/status" xmlns:jms="http:///com/ibm//etools/mft/unittest/common/model2/jms" xmlns:model2="http:///com/ibm//etools/mft/unittest/common/model2" xmlns:mq="http:///com/ibm//etools/mft/unittest/common/model2/mq">
+  <com.ibm.etools.mft.unittest.core.models.client:EclipseClient iD="1185548905421-550" eventTrace="/1" clientID="1185548905421-550">
+    <scopes xsi:type="model2:FlowTestScope" name="Configuration" iD="default" dirty="false">
+      <testModules xsi:type="model2:TestMsgFlow" name="/FileOutputNodeSampleFlowProject/FileOutputNodeSampleFlow.msgflow" iD="1185548905421-554">
+        <inputNodes xsi:type="http:HTTPInputNode" nodeName="HTTP Input" urlSpecifier="/FileOutputNodeSample"/>
+      </testModules>
+      <settings xsi:type="model2:FlowSettings"/>
+      <settings xsi:type="model2:DeploymentSettings" runtimeEnvType="WebSphere Message Broker v8.0" runtimeInstance="localhost^IB9NODE^FileOutputNodeSampleExecutionGroup^0" deployOption="DEPLOY_NEVER" barFile="/FileOutputNodeSampleFlowProject/FileOutputNodeSampleArchive.bar"/>
+      <settings xsi:type="mq:MQSettings"/>
+      <settings xsi:type="jms:JMSSettings"/>
+      <settings xsi:type="mq:MQMessageHeaders"/>
+      <settings xsi:type="jms:JMSMessageHeaders"/>
+      <messageHeaders xsi:type="mq:MQHeader" iD="1185548905421-553" headerName="Default Header"/>
+    </scopes>
+  </com.ibm.etools.mft.unittest.core.models.client:EclipseClient>
+  <com.ibm.wbit.comptest.common.models.event:ExecutionEventTrace iD="1185548905421-551" children="/2"/>
+  <model2:InteractiveInputNodeInvocationEvent iD="1185548905421-555" readOnly="true" clientID="1185548905421-550" timestamp="1185548905421" children="/3 /4 /7" msgFlow="/FileOutputNodeSampleFlowProject/FileOutputNodeSampleFlow.msgflow" nodeId="FCMComposite_1_1" testScopeID="default" nodeName="HTTP Input" nodeType="ComIbmWSInput.msgnode" targetDeploymentLocationID="1453466629149-24">
+    <request xsi:type="model2:TestMessage" iD="1185548905687-556">
+      <properties name="plainText" stringValue="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;soap:Envelope&#xD;&#xA;&#x9;xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&#xD;&#xA;&#x9;xmlns:samp=&quot;http://www.samplemessage.broker.hursley.ibm.com&quot;&#xD;&#xA;&#x9;xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>&#xD;&#xA;&lt;soap:Body>    &#xD;&#xA;&#x9;&lt;samp:SaleListMessage>&#xD;&#xA;&#x9;&lt;SaleEnvelope>&#xD;&#xA;&#x9;&#x9;&lt;Header>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;SaleListCount>1&lt;/SaleListCount>&#xD;&#xA;&#x9;&#x9;&lt;/Header>&#xD;&#xA;&#x9;&#x9;&lt;SaleList>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;Invoice>&#xD;&#xA;&#x9;   &#x9;&#x9;&#x9;&lt;Initial>K&lt;/Initial>&#xD;&#xA;&#x9;   &#x9;&#x9;&#x9;&lt;Initial>A&lt;/Initial>&#xD;&#xA;&#x9;   &#x9;&#x9;&#x9;&lt;Surname>Braithwaite&lt;/Surname>&#xD;&#xA;&#x9;   &#x9;&#x9;&#x9;&lt;Item>&#xD;&#xA;    &#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>00&lt;/Code>&#xD;&#xA;&#x9;&#x9;    &#x9;&#x9;&#x9;&lt;Code>01&lt;/Code>&#xD;&#xA;&#x9;&#x9;    &#x9;&#x9;&#x9;&lt;Code>02&lt;/Code>&#xD;&#xA;&#x9;&#x9;    &#x9;&#x9;&#x9;&lt;Description>Twister&lt;/Description>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Category>Games&lt;/Category>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Price>00.30&lt;/Price>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Quantity>01&lt;/Quantity>&#xD;&#xA;&#x9;&#x9;   &#x9;&#x9;&lt;/Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>02&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>03&lt;/Code>&#xD;&#xA;&#x9;&#x9;   &#x9;&#x9;&#x9;&lt;Code>01&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Description>The Times Newspaper&lt;/Description>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Category>Books and Media&lt;/Category>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Price>00.20&lt;/Price>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Quantity>01&lt;/Quantity>&#xD;&#xA;&#x9;&#x9;   &#x9;&#x9;&lt;/Item>&#xD;&#xA;&#x9;&#x9;   &#x9;&#x9;&lt;Balance>00.50&lt;/Balance>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Currency>Sterling&lt;/Currency>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/Invoice>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;Invoice>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Initial>T&lt;/Initial>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Initial>J&lt;/Initial>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Surname>Dunnwin&lt;/Surname>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>04&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>05&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>01&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Description>The Origin of Species&lt;/Description>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Category>Books and Media&lt;/Category>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Price>22.34&lt;/Price>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Quantity>02&lt;/Quantity>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>06&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>07&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>01&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Description>Microscope&lt;/Description>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Category>Miscellaneous&lt;/Category>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Price>36.20&lt;/Price>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Quantity>01&lt;/Quantity>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Balance>81.84&lt;/Balance>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Currency>Euros&lt;/Currency>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/Invoice>&#xD;&#xA;&#x9;&#x9;&lt;/SaleList>&#xD;&#xA;&#x9;&#x9;&lt;Trailer>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;CompletionTime>12.00.00&lt;/CompletionTime>&#xD;&#xA;&#x9;&#x9;&lt;/Trailer>&#xD;&#xA;&#x9;&lt;/SaleEnvelope>&#xD;&#xA;&#x9;&lt;/samp:SaleListMessage>&#xD;&#xA;&lt;/soap:Body>&#xD;&#xA;&lt;/soap:Envelope>"/>
+      <properties name="WSDL_URI"/>
+      <properties name="WSDL_OPERATION_IN_NAME"/>
+      <properties name="WSDL_OPERATION_NAME"/>
+      <properties name="WSDL_OPERATION_OUT_NAME"/>
+      <properties name="messageSource" stringValue="sourceView"/>
+      <properties name="SHOW_HEX_VIEW"/>
+      <properties name="linkedFile"/>
+    </request>
+  </model2:InteractiveInputNodeInvocationEvent>
+  <http_1:DeploymentStatus iD="1453466629134-22" parentID="1185548905421-555" timestamp="1453466629134" log="[Информация] Подготовка к развертыванию потоков сообщений&#xD;&#xA;[Информация] Развертывание приложения потока сообщений&#xD;&#xA;[Информация] Интеграция мониторов мониторов сообщений тестирования...&#xD;&#xA;[Информация] Клиент тестирования готов к отправке и отслеживанию сообщений.&#xD;&#xA;[Информация] Запуск потоков сообщений&#xD;&#xA;[Информация] Развертывание потоков сообщений успешно выполнено" status="OK" totalWork="10" worked="10" scope="/0/@scopes.0"/>
+  <com.ibm.wbit.comptest.common.models.event:StartEvent name="Запускается" iD="1453466636921-35" readOnly="true" clientID="1185548905421-550" parentID="1185548905421-555" timestamp="1453466636921" invokeCommandId="1453466636858-32" children="/5 /6"/>
+  <http:HTTPInformationEvent name="Отправка сообщения в &quot;HTTP Input&quot;" iD="1453466637014-36" readOnly="true" clientID="1185548905421-550" parentID="1453466636921-35" timestamp="1453466637014" invokeCommandId="1453466636921-33" endpoint="http://localhost:7080/FileOutputNodeSample">
+    <message xsi:type="model2:TestMessage" iD="1185548905687-556">
+      <properties name="plainText" stringValue="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;soap:Envelope&#xD;&#xA;&#x9;xmlns:soap=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&#xD;&#xA;&#x9;xmlns:samp=&quot;http://www.samplemessage.broker.hursley.ibm.com&quot;&#xD;&#xA;&#x9;xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>&#xD;&#xA;&lt;soap:Body>    &#xD;&#xA;&#x9;&lt;samp:SaleListMessage>&#xD;&#xA;&#x9;&lt;SaleEnvelope>&#xD;&#xA;&#x9;&#x9;&lt;Header>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;SaleListCount>1&lt;/SaleListCount>&#xD;&#xA;&#x9;&#x9;&lt;/Header>&#xD;&#xA;&#x9;&#x9;&lt;SaleList>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;Invoice>&#xD;&#xA;&#x9;   &#x9;&#x9;&#x9;&lt;Initial>K&lt;/Initial>&#xD;&#xA;&#x9;   &#x9;&#x9;&#x9;&lt;Initial>A&lt;/Initial>&#xD;&#xA;&#x9;   &#x9;&#x9;&#x9;&lt;Surname>Braithwaite&lt;/Surname>&#xD;&#xA;&#x9;   &#x9;&#x9;&#x9;&lt;Item>&#xD;&#xA;    &#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>00&lt;/Code>&#xD;&#xA;&#x9;&#x9;    &#x9;&#x9;&#x9;&lt;Code>01&lt;/Code>&#xD;&#xA;&#x9;&#x9;    &#x9;&#x9;&#x9;&lt;Code>02&lt;/Code>&#xD;&#xA;&#x9;&#x9;    &#x9;&#x9;&#x9;&lt;Description>Twister&lt;/Description>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Category>Games&lt;/Category>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Price>00.30&lt;/Price>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Quantity>01&lt;/Quantity>&#xD;&#xA;&#x9;&#x9;   &#x9;&#x9;&lt;/Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>02&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>03&lt;/Code>&#xD;&#xA;&#x9;&#x9;   &#x9;&#x9;&#x9;&lt;Code>01&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Description>The Times Newspaper&lt;/Description>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Category>Books and Media&lt;/Category>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Price>00.20&lt;/Price>&#xD;&#xA;&#x9;&#x9;&#x9;    &#x9;&#x9;&lt;Quantity>01&lt;/Quantity>&#xD;&#xA;&#x9;&#x9;   &#x9;&#x9;&lt;/Item>&#xD;&#xA;&#x9;&#x9;   &#x9;&#x9;&lt;Balance>00.50&lt;/Balance>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Currency>Sterling&lt;/Currency>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/Invoice>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;Invoice>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Initial>T&lt;/Initial>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Initial>J&lt;/Initial>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Surname>Dunnwin&lt;/Surname>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>04&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>05&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>01&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Description>The Origin of Species&lt;/Description>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Category>Books and Media&lt;/Category>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Price>22.34&lt;/Price>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Quantity>02&lt;/Quantity>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>06&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>07&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Code>01&lt;/Code>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Description>Microscope&lt;/Description>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Category>Miscellaneous&lt;/Category>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Price>36.20&lt;/Price>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&lt;Quantity>01&lt;/Quantity>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;/Item>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Balance>81.84&lt;/Balance>&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&lt;Currency>Euros&lt;/Currency>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;/Invoice>&#xD;&#xA;&#x9;&#x9;&lt;/SaleList>&#xD;&#xA;&#x9;&#x9;&lt;Trailer>&#xD;&#xA;&#x9;&#x9;&#x9;&lt;CompletionTime>12.00.00&lt;/CompletionTime>&#xD;&#xA;&#x9;&#x9;&lt;/Trailer>&#xD;&#xA;&#x9;&lt;/SaleEnvelope>&#xD;&#xA;&#x9;&lt;/samp:SaleListMessage>&#xD;&#xA;&lt;/soap:Body>&#xD;&#xA;&lt;/soap:Envelope>"/>
+      <properties name="WSDL_URI"/>
+      <properties name="WSDL_OPERATION_IN_NAME"/>
+      <properties name="WSDL_OPERATION_NAME"/>
+      <properties name="WSDL_OPERATION_OUT_NAME"/>
+      <properties name="messageSource" stringValue="sourceView"/>
+      <properties name="SHOW_HEX_VIEW"/>
+      <properties name="linkedFile"/>
+    </message>
+  </http:HTTPInformationEvent>
+  <http:HTTPReplyEvent name="Получен ответ HTTP для &quot;HTTP Input&quot;" iD="1453466638798-38" readOnly="true" clientID="1185548905421-550" parentID="1453466636921-35" timestamp="1453466638798" invokeCommandId="1453466636921-33" endpoint="http://localhost:7080/FileOutputNodeSample">
+    <message xsi:type="model2:TestMessage" iD="1453466638798-39">
+      <properties name="messageSource" stringValue="structureView"/>
+      <properties name="plainText" stringValue="%3Csoap%3AEnvelope+xmlns%3Asoap%3D%22http%3A%2F%2Fschemas.xmlsoap.org%2Fsoap%2Fenvelope%2F%22+xmlns%3Asamp%3D%22http%3A%2F%2Fwww.samplemessage.broker.hursley.ibm.com%22+xmlns%3Axsi%3D%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema-instance%22%3E%3Csoap%3ABody%3E%3Csamp%3ASaleListReplyMessage%3E%3CSaleEnvelope%3E%3CHeader%3E%3CSaleListCount%3E1%3C%2FSaleListCount%3E%3C%2FHeader%3E%3CSaleList%3E%3CInvoice%3E%3CInitial%3EK%3C%2FInitial%3E%3CInitial%3EA%3C%2FInitial%3E%3CSurname%3EBraithwaite%3C%2FSurname%3E%3CItem%3E%3CCode%3E00%3C%2FCode%3E%3CCode%3E01%3C%2FCode%3E%3CCode%3E02%3C%2FCode%3E%3CDescription%3ETwister%3C%2FDescription%3E%3CCategory%3EGames%3C%2FCategory%3E%3CPrice%3E00.30%3C%2FPrice%3E%3CQuantity%3E01%3C%2FQuantity%3E%3C%2FItem%3E%3CItem%3E%3CCode%3E02%3C%2FCode%3E%3CCode%3E03%3C%2FCode%3E%3CCode%3E01%3C%2FCode%3E%3CDescription%3EThe+Times+Newspaper%3C%2FDescription%3E%3CCategory%3EBooks+and+Media%3C%2FCategory%3E%3CPrice%3E00.20%3C%2FPrice%3E%3CQuantity%3E01%3C%2FQuantity%3E%3C%2FItem%3E%3CBalance%3E00.50%3C%2FBalance%3E%3CCurrency%3ESterling%3C%2FCurrency%3E%3C%2FInvoice%3E%3CInvoice%3E%3CInitial%3ET%3C%2FInitial%3E%3CInitial%3EJ%3C%2FInitial%3E%3CSurname%3EDunnwin%3C%2FSurname%3E%3CItem%3E%3CCode%3E04%3C%2FCode%3E%3CCode%3E05%3C%2FCode%3E%3CCode%3E01%3C%2FCode%3E%3CDescription%3EThe+Origin+of+Species%3C%2FDescription%3E%3CCategory%3EBooks+and+Media%3C%2FCategory%3E%3CPrice%3E22.34%3C%2FPrice%3E%3CQuantity%3E02%3C%2FQuantity%3E%3C%2FItem%3E%3CItem%3E%3CCode%3E06%3C%2FCode%3E%3CCode%3E07%3C%2FCode%3E%3CCode%3E01%3C%2FCode%3E%3CDescription%3EDeluxe+Microscope%3C%2FDescription%3E%3CCategory%3EMiscellaneous%3C%2FCategory%3E%3CPrice%3E44.00%3C%2FPrice%3E%3CQuantity%3E01%3C%2FQuantity%3E%3C%2FItem%3E%3CBalance%3E81.84%3C%2FBalance%3E%3CCurrency%3EEuros%3C%2FCurrency%3E%3C%2FInvoice%3E%3C%2FSaleList%3E%3CTrailer%3E%3CCompletionTime%3E12.00.00%3C%2FCompletionTime%3E%3C%2FTrailer%3E%3C%2FSaleEnvelope%3E%3C%2Fsamp%3ASaleListReplyMessage%3E%3C%2Fsoap%3ABody%3E%3C%2Fsoap%3AEnvelope%3E"/>
+      <properties name="SHOW_HEX_VIEW"/>
+      <properties name="linkedFile"/>
+      <parameters xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="soap:Envelope" iD="1453466638829-40">
+        <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueField" name="xmlns:xsi" iD="1453466638829-95" value="http://www.w3.org/2001/XMLSchema-instance"/>
+        <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueField" name="xmlns:soap" iD="1453466638829-94" value="http://schemas.xmlsoap.org/soap/envelope/"/>
+        <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueField" name="xmlns:samp" iD="1453466638829-93" value="http://www.samplemessage.broker.hursley.ibm.com"/>
+        <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="soap:Body" iD="1453466638829-41">
+          <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="samp:SaleListReplyMessage" iD="1453466638829-42">
+            <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="SaleEnvelope" iD="1453466638829-43">
+              <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Header" iD="1453466638829-44">
+                <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="SaleListCount" iD="1453466638829-45" value="1"/>
+              </elements>
+              <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="SaleList" iD="1453466638829-46">
+                <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Invoice" iD="1453466638829-47">
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Initial" iD="1453466638829-48" value="K"/>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Initial" iD="1453466638829-49" value="A"/>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Surname" iD="1453466638829-50" value="Braithwaite"/>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Item" iD="1453466638829-51">
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-52" value="00"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-53" value="01"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-54" value="02"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Description" iD="1453466638829-55" value="Twister"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Category" iD="1453466638829-56" value="Games"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Price" iD="1453466638829-57" value="00.30"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Quantity" iD="1453466638829-58" value="01"/>
+                  </elements>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Item" iD="1453466638829-59">
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-60" value="02"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-61" value="03"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-62" value="01"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Description" iD="1453466638829-63" value="The Times Newspaper"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Category" iD="1453466638829-64" value="Books and Media"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Price" iD="1453466638829-65" value="00.20"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Quantity" iD="1453466638829-66" value="01"/>
+                  </elements>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Balance" iD="1453466638829-67" value="00.50"/>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Currency" iD="1453466638829-68" value="Sterling"/>
+                </elements>
+                <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Invoice" iD="1453466638829-69">
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Initial" iD="1453466638829-70" value="T"/>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Initial" iD="1453466638829-71" value="J"/>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Surname" iD="1453466638829-72" value="Dunnwin"/>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Item" iD="1453466638829-73">
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-74" value="04"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-75" value="05"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-76" value="01"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Description" iD="1453466638829-77" value="The Origin of Species"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Category" iD="1453466638829-78" value="Books and Media"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Price" iD="1453466638829-79" value="22.34"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Quantity" iD="1453466638829-80" value="02"/>
+                  </elements>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Item" iD="1453466638829-81">
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-82" value="06"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-83" value="07"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Code" iD="1453466638829-84" value="01"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Description" iD="1453466638829-85" value="Deluxe Microscope"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Category" iD="1453466638829-86" value="Miscellaneous"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Price" iD="1453466638829-87" value="44.00"/>
+                    <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Quantity" iD="1453466638829-88" value="01"/>
+                  </elements>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Balance" iD="1453466638829-89" value="81.84"/>
+                  <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Currency" iD="1453466638829-90" value="Euros"/>
+                </elements>
+              </elements>
+              <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="Trailer" iD="1453466638829-91">
+                <elements xsi:type="com.ibm.wbit.comptest.common.models.value:ValueStructure" name="CompletionTime" iD="1453466638829-92" value="12.00.00"/>
+              </elements>
+            </elements>
+          </elements>
+        </elements>
+      </parameters>
+    </message>
+  </http:HTTPReplyEvent>
+  <com.ibm.wbit.comptest.common.models.event:EndEvent name="Остановлен" iD="1453466638829-96" readOnly="true" clientID="1185548905421-550" parentID="1185548905421-555" timestamp="1453466638829" invokeCommandId="1453466636921-33"/>
+</xmi:XMI>
