@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="toemail">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="subj"/>
+        <xsd:element ref="text"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="subj" type="xsd:string"/>
+  <xsd:element name="text" type="xsd:string"/>
+</xsd:schema>

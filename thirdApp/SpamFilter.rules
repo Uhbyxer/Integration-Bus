@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:decisionService xmlns:ns2="com.ibm.wmb.rulesmodel">
+    <type>ODM_EMBEDDED</type>
+    <name>SpamFilter</name>
+    <version>1.0</version>
+    <lastModified>Tue Jan 26 10:15:35 EET 2016</lastModified>
+    <description></description>
+    <RuleSets>
+        <RuleSet>
+            <name>SpamFilter</name>
+            <package></package>
+            <Parameters>
+                <Parameter>
+                    <name>subj</name>
+                    <kind>INOUT</kind>
+                    <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+                    <locale>ru</locale>
+                    <verbalization>subj</verbalization>
+                </Parameter>
+                <Parameter>
+                    <name>text</name>
+                    <kind>INOUT</kind>
+                    <type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</type>
+                    <locale>ru</locale>
+                    <verbalization>text</verbalization>
+                </Parameter>
+            </Parameters>
+            <Rules>
+                <Rule>
+                    <name>Rule 1</name>
+                    <sequenceNumber>0</sequenceNumber>
+                    <locale>ru</locale>
+                    <definition>если 
+	 subj содержит &quot;SPAM&quot;
+
+то сделать text равной &quot;Text removed&quot;;</definition>
+                </Rule>
+            </Rules>
+        </RuleSet>
+    </RuleSets>
+</ns2:decisionService>
